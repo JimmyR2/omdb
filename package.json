@@ -6,6 +6,10 @@
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "private": false,
   "scripts": {
     "build": "tsc",
