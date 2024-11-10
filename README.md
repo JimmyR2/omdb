@@ -21,7 +21,7 @@ $ yarn add @thblt-thlgn/omdb
 
 ```ts
 // Import in TypeScript
-import OMDb from '@thblt-thlgn/omdb';
+import { OMDb } from '@thblt-thlgn/omdb';
 
 // Import in JavaScript
 const { OMDb } = require('@thblt-thlgn/omdb');
