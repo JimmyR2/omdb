@@ -14,15 +14,17 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint",
-    "test": "mocha -r ts-node/register __test__/**/*.test.ts"
+    "test": "mocha __test__/**/*.test.ts"
   },
   "engines": {
     "node": ">13.0.0"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
     "@types/chai": "^5.0.1",
     "@types/mocha": "^10.0.9",
     "@types/node": "^22.9.0",
@@ -34,7 +36,8 @@
     "eslint-plugin-prettier": "^5.2.1",
     "mocha": "^10.8.2",
     "prettier": "^3.3.3",
-    "ts-node": "^10.9.2"
+    "tsx": "^4.19.2",
+    "typescript-eslint": "^8.13.0"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { generateQueryParams, asNumber, asNullable } from '../src/utils';
 import { expect } from 'chai';
 

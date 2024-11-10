@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import OMDb from '../src/omdb';
 import { expect } from 'chai';
+import 'dotenv/config';
 
 const { API_KEY } = process.env;
 
@@ -30,13 +32,9 @@ describe('OMDb SDK', () => {
 
     it('should return retrieve a list of movies', async () => {
       const client = new OMDb(API_KEY);
-      try {
-        const res = await client.search(movieName);
-        expect(res).to.exist;
-        expect(res.length).to.be.greaterThan(0);
-      } catch (e) {
-        expect(e).to.not.exist;
-      }
+      const res = await client.search(movieName);
+      expect(res).to.be.an('array');
+      expect(res.length).to.be.greaterThan(0);
     });
   });
 
@@ -67,12 +65,8 @@ describe('OMDb SDK', () => {
 
     it('should retrieve a movie', async () => {
       const client = new OMDb(API_KEY);
-      try {
-        const res = await client.getByTitle(movieName);
-        expect(res).to.exist;
-      } catch (e) {
-        expect(e).to.not.exist;
-      }
+      const res = await client.getByTitle(movieName);
+      expect(res).to.be.an('object');
     });
   });
 
@@ -103,12 +97,8 @@ describe('OMDb SDK', () => {
 
     it('should retrieve a movie', async () => {
       const client = new OMDb(API_KEY);
-      try {
-        const res = await client.getById(movieId);
-        expect(res).to.exist;
-      } catch (e) {
-        expect(e).to.not.exist;
-      }
+      const res = await client.getById(movieId);
+      expect(res).to.be.an('object');
     });
   });
 });

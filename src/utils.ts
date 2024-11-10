@@ -5,7 +5,7 @@ export const generateQueryParams = (
   queryParams: Record<string, string | number | undefined>,
 ): string =>
   Object.entries(queryParams)
-    .filter(([key, value]) => value !== undefined)
+    .filter(([_key, value]) => value !== undefined)
     .map(([key, value]) => `${key}=${value}`)
     .join('&');
 
